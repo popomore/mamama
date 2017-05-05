@@ -1,4 +1,41 @@
 {
   "name": "mamama",
-  "version": "0.0.0"
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "co": "^4.6.0",
+    "common-bin": "^2.3.1",
+    "mz": "^2.6.0",
+    "mz-modules": "^1.0.0"
+  },
+  "devDependencies": {
+    "autod": "^2.8.0",
+    "coffee": "^3.3.0",
+    "egg-bin": "^3.3.2",
+    "egg-ci": "^1.6.0",
+    "eslint": "^3.19.0",
+    "eslint-config-egg": "^4.0.0",
+    "webstorm-disable-index": "^1.1.2"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "scripts": {
+    "autod": "autod",
+    "lint": "eslint .",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "ci": "npm run lint && npm run cov",
+    "pkgfiles": "egg-bin pkgfiles"
+  },
+  "ci": {
+    "version": "4, 6, 7"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "MIT"
 }
